@@ -5,21 +5,21 @@ class AnsibleStaticLint < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/arhuman/ansible-static-lint/releases/download/v0.2.0/ansible-static-lint_0.2.0_darwin_arm64.tar.gz"
-      sha256 "76d590a3284584b9cb61f0b81e1387857c469862a46104f34e65179a9ccf171d"
+      url "https://github.com/arhuman/ansible-static-lint/releases/download/v0.6.0/ansible-static-lint_0.6.0_darwin_arm64.tar.gz"
+      sha256 "6ec9e051c06c87aa351b427247c023626fd6aeca764476c392c2175fc2dbc97d"
     else
-      url "https://github.com/arhuman/ansible-static-lint/releases/download/v0.2.0/ansible-static-lint_0.2.0_darwin_amd64.tar.gz"
-      sha256 "7cd2124bc25a1c223bc59b9f335a07009f5964120036488c818c753a686c298e"
+      url "https://github.com/arhuman/ansible-static-lint/releases/download/v0.6.0/ansible-static-lint_0.6.0_darwin_amd64.tar.gz"
+      sha256 "d156f68e2ca50db592d864910a06e55f9166d59d241f0fd4db330de65bb1c516"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/arhuman/ansible-static-lint/releases/download/v0.2.0/ansible-static-lint_0.2.0_linux_arm64.tar.gz"
-      sha256 "be26b75a2bec5aaf00fa66dcfd8b006215a12ca4f4e5fa2255a6a67cc773336f"
+      url "https://github.com/arhuman/ansible-static-lint/releases/download/v0.6.0/ansible-static-lint_0.6.0_linux_arm64.tar.gz"
+      sha256 "e969a1c908fefca9aae8e21c656ed0b3cf94d98aace4b15b931ed93d92bcf74d"
     else
-      url "https://github.com/arhuman/ansible-static-lint/releases/download/v0.2.0/ansible-static-lint_0.2.0_linux_amd64.tar.gz"
-      sha256 "2910ad9cc68d04c2d015be0b7f140a619021d32c33ea9a335b2fc21d9835d52a"
+      url "https://github.com/arhuman/ansible-static-lint/releases/download/v0.6.0/ansible-static-lint_0.6.0_linux_amd64.tar.gz"
+      sha256 "c0ccc7f79934fe599ca22292501844d29e845bad7964b862dd1e1370d5dad25d"
     end
   end
 
@@ -28,6 +28,6 @@ class AnsibleStaticLint < Formula
   end
 
   test do
-    assert_match "v0.2.0", shell_output("#{bin}/astl --version")
+    assert_match "v0.6.0", shell_output("#{bin}/astl --version")
   end
 end
